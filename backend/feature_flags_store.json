@@ -1,0 +1,33 @@
+{
+  "DEFAULT": {
+    "saturday_enabled": false,
+    "sunday_enabled": true,
+    "break_after_3rd_period": true,
+    "max_lectures_per_day": 4,
+    "lab_sessions_enabled": true,
+    "even_distribution": true
+  },
+  "DEMO_COLLEGE": {
+    "saturday_enabled": true,
+    "sunday_enabled": false,
+    "break_after_3rd_period": true,
+    "max_lectures_per_day": 4,
+    "lab_sessions_enabled": true,
+    "even_distribution": true
+  },
+  "COLR23": {
+    "saturday_enabled": true,
+    "sunday_enabled": false,
+    "break_after_3rd_period": true,
+    "max_lectures_per_day": 4,
+    "lab_sessions_enabled": true,
+    "even_distribution": true,
+    "ai_chat": true,
+    "slots_per_day": 8,
+    "start_time": "09:00",
+    "slot_duration_mins": 60,
+    "chat_persistent_memory": true,
+    "chat_guided_workflows": true,
+    "chat_assume_then_confirm": true
+  }
+}
