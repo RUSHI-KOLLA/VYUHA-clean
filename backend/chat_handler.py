@@ -709,7 +709,7 @@ async def execute_substitute_for_faculty_schedule(
                 continue
 
             top_names = ", ".join(
-                f"{sub['name']} (score {sub.get('score', 'NA')}, load {sub.get('current_load', 'NA')})"
+                f"{sub['name']} ({sub.get('current_load', '0')} classes today)"
                 for sub in substitutes[:3]
             )
             lines.append(
@@ -966,7 +966,7 @@ async def execute_substitution_for_date(college_id: str, date_str: str, faculty_
                     continue
 
                 names = ", ".join(
-                    f"{sub['name']} (score {sub.get('score', 'NA')}, load {sub.get('current_load', 'NA')})"
+                    f"{sub['name']} ({sub.get('current_load', '0')} classes today)"
                     for sub in substitutes[:3]
                 )
                 lines.append(
@@ -1429,7 +1429,7 @@ def _extract_substitute_names_from_text(text: str) -> List[str]:
             continue
         chunk = match.group(1)
         for candidate in chunk.split(","):
-            name_match = re.match(r"\s*([A-Za-z][A-Za-z0-9 .'-]{1,80})\s+\(score", candidate.strip())
+            name_match = re.match(r"\s*([A-Za-z][A-Za-z0-9 .'-]{1,80})\s+\(\d+\s+classes", candidate.strip())
             if name_match:
                 names.append(name_match.group(1).strip())
     seen = set()
