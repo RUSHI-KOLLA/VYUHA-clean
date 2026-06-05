@@ -19,7 +19,7 @@ VYUHA is a comprehensive, full-stack institution management system designed to s
 - **Language**: Python
 - **API Framework**: Python-based API (FastAPI/Uvicorn)
 - **Database & Auth**: [Supabase](https://supabase.com/)
-- **Deployment**: Railway
+- **Deployment**: Render
 
 ### Frontend
 - **Framework**: React
